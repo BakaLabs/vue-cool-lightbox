@@ -1694,7 +1694,7 @@ export default {
 
       // youtube data
       const youtubeRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
-      const ytId = (url.match(youtubeRegex)) ? RegExp.$1 : false;
+      const ytId = (url != undefined && url.match(youtubeRegex)) ? RegExp.$1 : false;
 
       if(ytId) {
         return ytId
